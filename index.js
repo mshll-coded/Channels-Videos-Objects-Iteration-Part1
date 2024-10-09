@@ -201,6 +201,7 @@ function getChannelByVideoTitle(videoTitle, channels) {
  * Hint: use string method `.includes()` and iteration method `.filter()`
  ****************************************************************/
 function searchChannels(query, channels) {
+  query = query.toLowerCase();
   return channels.filter((channel) => channel.name.toLowerCase().includes(query) || channel.description.toLowerCase().includes(query));
 }
 // console.log(searchChannels('the', channels));
